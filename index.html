@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+<head>
+    <title>Sagan om Den Gamla Lyktan</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+
+
+<!-- Header -->
+<header class="header">
+    <div class="nav">
+        <button class="hamburger">Meny&#9776;</button>
+        <ul class="submenu">
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="event.html">Om Eventet</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </div>
+    <p class="header-text">Sagan om den gamla lyktan är en indiefilm som tar inspirationer från den nordiska folktron om den vilseledna lyktgubben. Tillsammans med filmens release håller GNEMA i ett premiärevent. Låt lyktan leda dig...</p>
+</header>
+
+
+<main>
+<!-- countdown -->
+<div class="countdown">
+    <div>
+        <p id="days">00</p>
+        <span>Days</span>
+    </div>
+    <div>
+        <p id="hours">00</p>
+        <span>Hours</span>
+    </div>
+    <div>
+        <p id="minutes">00</p>
+        <span>Minutes</span>
+    </div>
+    <div>
+        <p id="seconds">00</p>
+        <span>Seconds</span>
+    </div>
+</div>
+
+<div class="button-container">
+    <a href="event.html" class="button">PREMIÄREVENT</a>
+</div>
+
+
+
+
+<!-- Trailer -->
+<div class="trailer">
+<h2 class="trailer-title">Trailer</h2>
+
+<video class="trailer-video" controls> 
+    <source src="images/teaser.mp4" type="video/mp4">
+    Your browser does not support the tag.
+</video>
+
+<div class="trailer-text">
+<p>En sen juninatt befinner sig den 20 åriga killen i skogen, med inga minnen om hur han hamnade här började han traska hopplöst längs stigen. Plötsligt såg han, i bakgrunden, det starka flimrande ljuset röra sig bortom i skogen. Hopplöst ville han följa efter ljuset men det som är kvar av hans förnuft talar till honom att inte lämna stigen.  
+    <br>
+    <br>
+    “Den mystiska skogen försöker på alla sätt att lura och livnär sig på de vilsna” säger han till sigsjälv. 
+     <br>
+     <br>
+    “Om skogen livnär sig på de vilsna, hade den tagit din själ sen innan du satte foten här” en gubbe med lyktan yttrade. Gubben och den unge mannen konverserade och lyktgubben lovar att hjälpa honom navigera ut ur skogen.  
+     <br>
+    <br>
+    Kommer lyktgubben hålla sitt löfte eller blir unge mannen en av de vilsna själar som går förlorad i skogen? </p>
+    </div>
+</div>
+
+</main>
+
+
+<!-- Footer -->
+<footer class="footer-home">
+<div class="sidkarta">
+<ul>
+<li><span class="footer-title">Sidkarta</span></li>
+<li><a href="index.html">Hem</a></li>
+<li><a href="event.html">Event</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
+</ul>
+</div>
+
+<div class="kontakt">
+<ul>
+<li><span class="footer-title">Kontakt</span></li>
+<li>info@dengamlalyktan.se</li>
+<li>011 088 88 11</li>
+<li><br></li>
+<li>Stengatan 12</li>
+<li>602 21 Norrköping</li>
+</ul>
+</div>
+
+</footer>
+
+</div>
+
+<!-- java -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <!-- Countdown kod -->
+    <script>
+        var countDownDate = new Date("June 21,2024 17:00:00").getTime();
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var distance= countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML=days;
+            document.getElementById("hours").innerHTML=hours;
+            document.getElementById("minutes").innerHTML=minutes;
+            document.getElementById("seconds").innerHTML=seconds;
+
+        },1000);
+    </script>
+    <!-- Koden hämtas från https://www.youtube.com/watch?v=_LExTzOhe7s&t=304s -->
+</body>
+
+</html>
